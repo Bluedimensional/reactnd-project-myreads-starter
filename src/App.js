@@ -17,12 +17,21 @@ class BooksApp extends React.Component {
     })
   }
 
-  moveShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf);
+  // BooksAPI.getAll() and BooksAPI.update() are asynchronous. Inside your moveShelf function, you should wrap getAll() in a then to ensure that it runs after update() has finished
+  // you want to make sure that .update() is done before running .getAll() again, so you should chain a .then() after .update() that includes the getAll method
 
-    BooksAPI.getAll().then((books) => {
+  // but it should be like BooksAPI.update(book, shelf).then(() => { BooksAPI.getAll().then(books)... then you set the state in the final then
+
+  moveShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf).then(() => { 
+      BooksAPI.getAll().then((books) => {
       this.setState({ books: books })
     })
+
+
+    });
+
+    
   }
 
   render() {
