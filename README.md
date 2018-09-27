@@ -1,92 +1,69 @@
-# MyReads Project
+# React Fundamentals: MyReads
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+## Project description
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+The aim of this application is to allow the user to keep track of their own personal library. It includes a list of the books that are already in their possession or those in their wishlist. Each of these books will be grouped in three _shelves_ depending on their status:
 
-## TL;DR
+* Currently reading
+* Want to read
+* Read
 
-To get started developing right away:
+The user will be able to change a book status anytime, as well as add new titles to their collection or remove items from their library.
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+## Installation and deployment
 
-## What You're Getting
+### Pre-requisites
+
+Before being able to run this application, you must have [Node Package Manager](https://nodejs.org/en/) or [Yarn](https://yarnpkg.com/) installed on your system.
+
+### Get the application running
+
+If you have all the required software installed, the first step to run this application is to install all of its dependencies and start the application's server.
+
+To do so, you must open a console and, once located into the project's root directory, run the following commands:
+
 ```bash
-├── CONTRIBUTING.md
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
-    │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+# Install all project's dependencies
+> npm install
+
+# Run application's server
+> npm start
 ```
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+These instructions assume that you've installed [Node Package Manager](https://nodejs.org/en/). If you are using [Yarn](https://yarnpkg.com/) instead, just replace `npm` with `yarn` in the commands listed above.
 
-## Backend Server
+After running the `start` command, the console output should tell you at which URL is the application running.
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+```bash
+The app is running at:
 
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
-
-### `getAll`
-
-Method Signature:
-
-```js
-getAll()
+  # URL where the app is running
+  http://localhost:3000/
 ```
 
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
+Now you only have to enter that URL into your favourite browser, and that's it! You're all set!
 
-### `update`
 
-Method Signature:
+## Aspects to consider
 
-```js
-update(book, shelf)
-```
+### Available search terms
 
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+The provided API that serves as a backend for this application does only support a fixed set of search terms. The search page will _not_ return any results for queries that don't match any of the search terms specified in [this list](SEARCH_TERMS.md).
 
-### `search`
+### Project status
 
-Method Signature:
+Although the specified criteria for passing the first project at the [Udacity's Front End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) should be met by now, this repository will remain open to new features and improvements. Feel free to [open a new issue](https://github.com/Bluedimensional/reactnd-project-myreads-starter/pulls/new) if you have any suggestion or come across a bug that should eventually be fixed.
 
-```js
-search(query)
-```
+### Browser support
 
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+This application has been tested in the following browsers:
 
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+* Google Chrome (~69.0.3497.100)
 
-## Create React App
+It's possible that _it might present unexpected behaviours or rendering problems in older browsers_ that have no support for the latest ES2015, HTML5 or CSS3 features.
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+Since Chrome was one of the main tools used while developing and debugging this application, it's highly recommended to run it in a recent version of Google Chrome.
 
-## Contributing
+### Credits
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+If you need information of the resources used on this project, take a look at [this file](CREDITS.md). This includes links to some useful documentation resources, tools involved in the development process and credits to the authors of the icons used throughout the application.
