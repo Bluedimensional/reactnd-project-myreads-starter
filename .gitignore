@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 node_modules
 yarn.lock
 .DS_Store
 package.json
 package-lock.json
 README-clone.md
+||||||| merged common ancestors
+node_modules
+yarn.lock
+.DS_Store
+package.json
+package-lock.json
+=======
+node_modules
+yarn.lock
+.DS_Store
+package.json
+package-lock.json
+>>>>>>> 6cf58df4846de22325ad25b72620f424ac065bba
