@@ -15,3 +15,7 @@ Here you'll find a list of some of the resources used on this project, including
 * [Jest Docs](https://facebook.github.io/jest/docs/en/getting-started.html)
 * [Testing React Apps](https://facebook.github.io/jest/docs/en/tutorial-react.html)
 * [Testing React Router](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/testing.md)
+
+## Peer Guidance
+
+* [EMEA student Daniela Küster's Walk-Thru](https://www.youtube.com/watch?v=i6L2jLHV9j8)
